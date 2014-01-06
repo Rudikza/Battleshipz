@@ -1,0 +1,27 @@
+%b Name:
+= @game.name
+%p
+
+%b Opponent:
+= @game.opponent
+%p
+
+- if @game.status
+  %b Status:
+  = @game.status
+
+- if @game.prize
+  %b Prize:
+  = @game.prize
+  %p
+- if @game.opponent_id
+  %p
+    %b Opponent ID:
+    = @game.opponent_id
+
+- if @game.opponent_ships_sank
+  %b Ships Sunk:
+  %p
+  - @game.opponent_ships_sank.each do |ship|
+    = ship
+    %p

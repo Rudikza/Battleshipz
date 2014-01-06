@@ -1,0 +1,20 @@
+%p
+- unless @game.opponent_id
+  = link_to "Start Manual Game", game_start_path(@game),         class: "button radius"
+  = link_to "Start Automatic Game", game_auto_start_path(@game), class: "button radius", id: "auto_start"
+
+%p
+- if @game.status
+  = render 'game_over'
+- else
+  = render 'boards'
+
+.row
+.large-4.columns
+  %p
+  = link_to 'Back', :back, class: "button radius"
+
+#myModal.reveal-modal{"data-reveal" => ""}
+  %h2 Awesome. I have it.
+  %p.lead Your couch.  It is mine.
+  %p Im a cool paragraph that lives inside of an even cooler modal. Wins

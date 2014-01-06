@@ -1,0 +1,20 @@
+%b Name:
+= @game.name
+%p
+
+%b Opponent:
+= @game.opponent
+%p
+
+- if @game.status
+  %b Status:
+  = @game.status
+  %p
+- if @game.prize
+  %b Prize:
+  = @game.prize
+  %p
+- if @game.opponent_id
+  %p
+    %b Opponent ID:
+    = @game.opponent_id

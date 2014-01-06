@@ -1,0 +1,17 @@
+== README
+
+So this is my battleship application. It's not complete but I thought I would add in as much as possible.
+
+Todo:
+
+* Logic to determine if a ship was hit or not.
+
+* Figure out how to intercept the http request and detect if a ship was hit or not and send back results.
+
+* Automated Logic to randomly fire at opponent excluding already fired shots.
+
+* Ability for ships to be placed randomly.
+
+* Ability for user to determine where to fire.
+
+* Ability for user to place ships.

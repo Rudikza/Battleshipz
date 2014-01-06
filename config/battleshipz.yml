@@ -1,0 +1,31 @@
+defaults: &DEFAULTS
+  opponents:
+    platform45:
+      url: 'http://battle.platform45.com/'
+
+  ships:
+    carrier:
+      size: 5
+
+    battleship:
+      size: 4
+
+    destroyer:
+      size: 3
+
+    submarine1:
+      size: 2
+      amount: 2
+
+    patrol_boat:
+      size: 1
+      amount: 2
+
+development:
+   <<: *DEFAULTS
+
+test:
+   <<: *DEFAULTS
+
+production:
+   <<: *DEFAULTS

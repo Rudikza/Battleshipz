@@ -1,0 +1,21 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+    table-layout: fixed;
+}
+
+th, td {
+    overflow: hidden;
+    width: 50px;
+}
+td.hit {
+  background: url(hit.jpg);
+  background-repeat: no-repeat;
+}
+
+td.miss {
+  background: url(miss.jpg);
+  background-repeat: no-repeat;
+}
+

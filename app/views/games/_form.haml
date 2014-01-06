@@ -1,0 +1,5 @@
+= simple_form_for @game do |f|
+  = f.input :name
+  = f.input :opponent, collection: opponents, include_blank: false
+  = f.hidden_field :opponent_url
+  = f.submit 'Save', class: "button radius"

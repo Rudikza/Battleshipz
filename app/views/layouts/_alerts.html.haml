@@ -1,0 +1,12 @@
+- if flash[:info]
+  = content_tag :div, :id => "flash_name", :class => "alert-box info" do
+    = flash[:notice]
+    %a.close{href: "#"} ×
+- if flash[:notice]
+  = content_tag :div, :id => "flash_name", :class => "alert-box success" do
+    = flash[:notice]
+    %a.close{href: "#"} ×
+- if flash[:error]
+  = content_tag :div, :id => "flash_name", :class => "alert-box error" do
+    = flash[:error]
+    %a.close{href: "#"} ×

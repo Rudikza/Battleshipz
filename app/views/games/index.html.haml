@@ -1,0 +1,23 @@
+.row
+  .large-10.columns
+    %h1 All Games
+
+    %table
+      %tr
+        %th Name
+        %th Opponent
+        %th
+        %th
+
+      - @games.each do |game|
+        %tr
+          %td= game.name
+          %td= game.opponent
+          %td= link_to 'Show', game, class: "button small radius"
+          %td= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }, class: "button small radius alert" if user_signed_in?
+
+    %br
+    %p
+      = link_to 'New Game', new_game_path, class: "button radius" if user_signed_in?
+    %p
+      = link_to 'Back', :back, class: "button radius"

@@ -1,0 +1,1 @@
+CONFIG = YAML.load_file(Rails.root.join('config', 'battleshipz.yml'))[Rails.env].with_indifferent_access

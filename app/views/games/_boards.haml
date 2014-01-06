@@ -1,0 +1,37 @@
+- if @game.opponent_id
+  %p
+  %b
+  %p
+
+  %table.large-4.columns
+    %caption Opponents Board
+    %tr
+      %th{class: "td_size"}
+      - (0..9).each do |column|
+        %th{class: "td_size"}= column
+
+      - @opponent_board[:grid].each do |key, value|
+        %tr{height: "50"}
+          %td= key
+          - value.each do |info|
+            %td{class: info[1][:status]}
+              = image_tag "ship.gif", size: "40", alt: info[1][:ship] if info[1][:status]["hit"]
+              = link_to "Fire", game_attack_path(@game, x_pos: key, y_pos: info[0]), class: "button tiny alert" if info[1][:status].empty?
+
+
+
+- #TODO: Extract this out in to one partial for both opponent and player boards
+%table.large-4.columns
+  %caption Players Board
+  %tr
+    %th
+    - (0..9).each do |column|
+      %th= column
+
+    - @player_board[:grid].each do |key, value|
+      %tr{height: "50"}
+        %td= key
+        - value.each do |info|
+          %td{class: info[1][:status]}
+            =image_tag "ship.gif", align: "middle", size: "40", alt: info[1][:ship] if ship?(info[1])
+
