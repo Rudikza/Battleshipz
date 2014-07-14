@@ -22,24 +22,24 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', "~> 2.1.0"
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 # Haml templating
-gem 'haml-rails', '~> 0.4'
+gem 'haml-rails'
 
 # Devise for authentication
-gem 'devise', '~> 3.2.1'
+gem 'devise', '~> 3.2.4'
 
 # Simple Forms
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form'
 
 # Rest Client
-gem "rest-client", "~> 1.6.7"
+gem "rest-client"
 
-gem "zurb-foundation", "~> 4.3.2"
+gem "zurb-foundation"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -47,20 +47,24 @@ group :doc do
 end
 
 group :development do
-  gem 'better_errors', '~> 0.7.2'
+  gem 'better_errors'
+  gem 'railroady'
   gem 'binding_of_caller', platforms: :ruby
 end
 
 group :development,:test do
-  gem 'thin', '~> 1.5.1', platforms: :ruby
-  gem 'rspec-rails', '~> 2.14.0'
-  gem 'factory_girl_rails', '~> 4.3.0'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'thin', platforms: :ruby
 
-  gem 'guard-spork', '~> 1.5.1'
-  gem 'guard-rspec', '~>4.0.4'
+  gem 'spring-commands-rspec'
+
+  gem 'guard-spring'
+  gem 'guard-rspec'
 
   gem 'pry-rails'
   gem 'pry-doc'
+
   # Fix for Guard "Cant modify String error"
   gem 'rb-readline', '~> 0.5.0', require: 'readline'
 
@@ -69,16 +73,19 @@ group :development,:test do
 
   gem 'fuubar'
   gem 'meta_request'
+
 end
 
 group :test do
-  gem 'shoulda-matchers', '~> 2.4.0'
-  gem 'spork', '~> 1.0.0rc4'
+  gem 'shoulda-matchers'
+  gem 'spork'
 
   gem 'rb-inotify', require: false
-  gem 'simplecov', '~> 0.8.1', require: false
-  gem 'faker', ' ~> 1.2.0'
-  gem 'database_cleaner', ' ~> 1.2.0'
+  gem 'faker'
+  gem 'database_cleaner'
+
+  # Spefic version here due to bug in 0.8.x.
+  gem 'simplecov', '~> 0.8.2'
 end
 
 # Use ActiveModel has_secure_password
