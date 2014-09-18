@@ -1,7 +1,7 @@
 source 'http://gems.cloudafrica.net'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.6'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -28,13 +28,13 @@ gem 'turbolinks', "~> 2.1.0"
 gem 'jbuilder', '~> 1.2'
 
 # Haml templating
-gem 'haml-rails', '~> 0.4'
+gem 'haml-rails', '~> 0.5.3'
 
 # Devise for authentication
 gem 'devise', '~> 3.2.1'
 
 # Simple Forms
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form', '~> 3.0.2'
 
 # Rest Client
 gem "rest-client", "~> 1.6.7"
